@@ -1,0 +1,106 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+            <input class=" mm-global-search" type="text" placeholder="Search">
+
+            <mat-icon class="icons">search</mat-icon>
+            <span (click)="onSearchClick(searchText)">
+            </span>
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#logout">logOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <h4 class="pci">PCi Compliance</h4>
+
+        <div class="search">
+            <div class="float-right">
+
+                <input id="search-input" type="search" class="form-control" placeholder="Filter Stores" />
+                <mat-icon class="Icons">search</mat-icon>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="Pci-Compliance">
+
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th>Name </th>
+                        <th>Comment </th>
+                        <th> Status </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="compliance mb-3">
+                        <td>Anil</td>
+                        <td class="comment">Trustwave has deep background and leadership in PCI compliance, working
+                            withmerchants of all
+                            sizes, processors, acquiring banks, independent sales organizations and card brands around
+                            the world.</td>
+                        <td>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <a class="slider round"></a>
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr class="compliance">
+                        <td>Sai</td>
+                        <td class="comment"> What is a PCI-Compliant Firewall? In most merchant point-of-sale
+                            environments, the firewall
+                            is a hardware device that you connect to your IT network.</td>
+                        <td>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <a class="slider round"></a>
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr class="compliance">
+                        <td>Keerthana</td>
+                        <td class="comment">The PCI Attestation of Compliance (AoC) is just that, an attestation
+                            completed by a
+                            Qualified Security Assessor (QSA) that states an organizations PCI DSS compliance.</td>
+                        <td>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <a class="slider round"></a>
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+    </div>
+</section>

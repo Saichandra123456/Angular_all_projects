@@ -1,0 +1,156 @@
+<div class="mm-navbarCollapse">
+
+    <input class="form-control mm-global-search" type="text" placeholder="Search">
+
+    <mat-icon class="icons">search</mat-icon>
+
+    <a class="active-notification">
+        <span class="material-icons mm-notification"><img
+                src="../../assets/images/notification.svg">notifications</span>
+    </a>
+
+    <div class="mm-dropdown notification">
+        <div class="mm-heading d-flex justify-content-between">
+            <h6>Anil</h6>
+        </div>
+        <img src="../../assets/images/profile.png" class="img-fluid">
+        <div class="dropdown">
+            <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">logOut</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<p>Export</p>
+<div class="card">
+        <div class="franchisees">
+            <ul class="nav nav-pills mm-nav-pills mm-tabs-responsive" role="tablist">
+                <!-- <ul class="nav nav-tabs" id="myTab"> -->
+                <li class="nav-item col-md-6 ">
+                    <a href="#storedata" class="nav-link" data-bs-toggle="tab">
+                        Business Entity</a>
+                </li>
+                <li class="nav-item col-md-6">
+                    <a href="#visitcommunicationlog" class="nav-link" data-bs-toggle="tab">Franchisee</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade show " id="storedata">
+            <div class="mm-exportHeading col-md-4">
+                <h4>Export By</h4>
+                <input class="form-control Search" type="text" placeholder="-Select-">
+                <mat-icon class="Arrowdown">keyboard_arrow_down</mat-icon>
+
+            </div>
+            <hr class="new1">
+            <div class="mm-additionalFilters">
+                <div class="mm-additionalHeading">
+                    <h4>Additional Filters</h4>
+                </div>
+                <div class="mm-salesDrop">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Sales Channel</h5>
+                            <input class="form-control Search" type="text" placeholder="-Select-">
+                            <mat-icon class="Arrowdowns">keyboard_arrow_down</mat-icon>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Marketing Program</h5>
+                            <input class="form-control Search" type="text" placeholder="-Select-">
+                            <mat-icon class="ArrowDown">keyboard_arrow_down</mat-icon>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Warehouse</h5>
+                            <input class="form-control Search" type="text" placeholder="-Select-">
+                            <mat-icon class="Arrowdownss">keyboard_arrow_down</mat-icon>
+                        </div>
+
+                        <div class="col-md-4 mt-5">
+                            <h5>Market Segment</h5>
+                            <input class="form-control Search" type="text" placeholder="-Select-">
+                            <mat-icon class="AArrowdown">keyboard_arrow_down</mat-icon>
+                        </div>
+                        <div class="col-md-4 mt-5">
+                            <h5>Building Type</h5>
+                            <input class="form-control Search" type="text" placeholder="-Select-">
+                            <mat-icon class="ARrowdown">keyboard_arrow_down</mat-icon>
+                        </div>
+                        <div class="col-md-4 mt-5">
+                            <h5>Class Year</h5>
+                            <input class="form-control Search" type="text" placeholder="yyyy to yyyy">
+                            <mat-icon class="ArRowdown">keyboard_arrow_down</mat-icon>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="clear">Clear</button>
+                        <button class="exports">
+                            <a class="dropdown-toggle">
+                                Export To
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="visitcommunicationlog">
+            <div class="mm-exportHeading col-md-4">
+                <h4>Export By</h4>
+                <input class="form-control Search" type="text" placeholder="-Select-">
+                <mat-icon class="Arrowdown">keyboard_arrow_down</mat-icon>
+
+            </div>
+            <hr class="new1">
+            <div class="mm-additionalFilters">
+                <div class="mm-additionalHeading">
+                    <h4>Additional Filters</h4>
+                </div>
+                <div class="mm-salesDrop">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Visit Date Range</h5>
+                            <input class="form-control Search" type="text" placeholder="-Select-">
+                            <mat-icon class="Arrowdowns">keyboard_arrow_down</mat-icon>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>No Visit Date Range</h5>
+                            <input class="form-control Search" type="text" placeholder="-Select-">
+                            <mat-icon class="ArrowDown">keyboard_arrow_down</mat-icon>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Type Of Visit</h5>
+                            <input class="form-control Search" type="text" placeholder="-Select-">
+                            <mat-icon class="Arrowdownss">keyboard_arrow_down</mat-icon>
+                        </div>
+
+                        <div class="col-md-4 mt-5">
+                            <h5>Name Of Visitors</h5>
+                            <input class="form-control Search" type="text" placeholder="-Select-">
+                            <mat-icon class="AArrowdown">keyboard_arrow_down</mat-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="clear">Clear</button>
+                    <button class="exports">
+                        <a class="dropdown-toggle">
+                            Export To
+                        </a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

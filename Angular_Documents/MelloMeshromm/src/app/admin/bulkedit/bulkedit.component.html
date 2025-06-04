@@ -1,0 +1,251 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+            <input class=" mm-global-search" type="text" placeholder="Search">
+
+            <mat-icon class="icons">search</mat-icon>
+            <span (click)="onSearchClick(searchText)">
+            </span>
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="Entity">
+            <h5>Bulk Edit </h5>
+
+            <div class="search">
+                <div class="float-right">
+                    <div class="input-group ">
+                        <div class="form-outline">
+                            <input id="search-input" type="search" class="form-control" placeholder="Filter Stores" />
+                            <mat-icon class="Icons">search</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card  Business">
+
+            <table class="table">
+
+                <thead>
+                    <tr class="text-center">
+                        <th>
+                            <input type="checkbox">
+                        </th>
+                        <th (click)="sort('storeid')">Store Id &nbsp; <mat-icon>arrow_upward</mat-icon>
+                        </th>
+                        <th (click)="sort('storename')">Store Name &nbsp; <mat-icon>arrow_upward</mat-icon>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of franchisee |orderBy:key:reverse; let i=index" class="text-center">
+                        <td>{{row.checkbox}}
+                            <input type="checkbox">
+                        </td>
+                        <td>{{row.storeid}}</td>
+                        <td>{{row.storename}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+            <div class="card ">
+                <div class="Bulk">
+                    <div class="BulkEdit">
+                        <ul class="nav nav-pills mm-nav-pills mm-tabs-responsive" role="tablist">
+                        <!-- <ul class="nav nav-tabs" id="myTab"> -->
+
+                            <!-- <ul class="nav nav-tabs" id="myTab"> -->
+                            <li class="nav-item col-md-3 ">
+                                <a href="#SalesChannel" class="nav-link" data-bs-toggle="tab">
+                                    3rd Pary Sales Channel</a>
+                            </li>
+                            <li class="nav-item col-md-3">
+                                <a href="#MarketingProgram" class="nav-link" data-bs-toggle="tab">Marketing Program</a>
+                            </li>
+
+                            <li class="nav-item col-md-3">
+                                <a href="#StoreFeatures" class="nav-link" data-bs-toggle="tab">Store Features</a>
+                            </li>
+
+                            <li class="nav-item col-md-3">
+                                <a href="#Technology" class="nav-link" data-bs-toggle="tab">Technology</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card  Business">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="SalesChannel">
+                        <table class="table">
+                            <thead>
+                                <tr class="text-center">
+                                    <th (click)="sort('name')">Name &nbsp; <mat-icon>arrow_upward</mat-icon>
+                                    </th>
+                                    <th>Actions </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let row of saleschannel |orderBy:key:reverse; let i=index"
+                                    class="text-center">
+                                    <td>{{row.name}}</td>
+                            <!-- <td>{{row.actions}}</td> -->
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <a class="slider round"></a>
+                                    </label>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade" id="StoreFeatures">
+                        <table class="table table-container">
+
+                            <thead>
+                                <tr class="text-center">
+                                    <th (click)="sort('name')">Business
+                                        Name &nbsp;
+                                        <mat-icon> arrow_upward</mat-icon>
+                                    <th>Actions </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let row of storefeatures |orderBy:key:reverse; let i=index"
+                                    class="text-center">
+
+                                    <td>{{row.name}}</td>
+                                    <td class="Status">{{row.status}}</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+
+
+                    <div class="tab-pane fade" id="MarketingProgram">
+                        <table class="table table-container">
+
+                            <thead>
+                                <tr class="text-center">
+
+                                    <th (click)="sort('name')">Business
+                                        Name &nbsp;
+                                        <mat-icon>
+                                            arrow_upward</mat-icon>
+                                    </th>
+                                    <th (click)="sort('startdate')">Start Date &nbsp;
+                                        <mat-icon>arrow_upward</mat-icon>
+                                    </th>
+                                    <th (click)="sort('enddatte')">End Date &nbsp; <mat-icon>
+                                            arrow_upward</mat-icon>
+                                    </th>
+
+                                    <th>Actions </th>
+
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of marketingProgram |orderBy:key:reverse; let i=index"
+                                    class="text-center">
+
+                                    <td>{{row.name}}</td>
+                                    <td>{{row.startdate}}</td>
+                                    <td>{{row.enddate}}</td>
+
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <a class="slider round"></a>
+                                    </label>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+
+                    <!-- //technology -->
+                    <div class="tab-pane fade" id="Technology">
+                        <table class="table table-container">
+                            <thead>
+                                <tr class="text-center">
+                                    <th (click)="sort('name')">Business
+                                        Name &nbsp;
+                                        <mat-icon> arrow_upward</mat-icon>
+                                    <th>Status </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of technology |orderBy:key:reverse; let i=index"
+                                    class="text-center">
+                                    <td>{{row.name}}</td>
+                                    <td class="Status">{{row.status}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <button class="tab-btn cancel mt-3" (click)="TechnologyBulkEdit()">Cancel</button>
+            <button class="tab-btn save mt-3" (click)="technologyEdit() ">Save</button>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <div class="tab-content">
+    <div class="tab-pane fade show active" id="home">
+        <h4 class="mt-2">Home tab content</h4>
+        <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+    </div>
+    <div class="tab-pane fade" id="profile">
+        <h4 class="mt-2">Profile tab content</h4>
+        <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+    </div>
+    <div class="tab-pane fade" id="messages">
+        <h4 class="mt-2">Messages tab content</h4>
+        <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
+    </div>
+</div>
+</div>
+</body>
+</html> -->

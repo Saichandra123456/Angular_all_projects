@@ -1,0 +1,26 @@
+{
+    "employees": [
+      {
+        "id": 1,
+        "firstName": "Naveen",
+        "lastName": "Goggi",
+        "mobile":"9959255289",
+        "salary":"35000"
+      },
+      {
+        "id": 2,
+        "firstName": "Anil",
+        "lastName": "Tera",
+        "mobile":"9959255289",
+        "salary":"35000"
+      },
+      {
+        "id": 3,
+        "firstName": "Anil",
+        "lastName": "Reddy",
+        "mobile":"9959255289",
+        "salary":"35000"
+      }
+    ]
+   
+  }

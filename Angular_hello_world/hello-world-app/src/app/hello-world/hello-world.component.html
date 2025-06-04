@@ -1,0 +1,26 @@
+<div class="container">
+    <!-- Component Example -->
+    <h1>Hello World from Angular Component!</h1>
+  
+    <!-- Structural Directive: *ngIf -->
+    <p *ngIf="showMessage">This is a conditional message displayed using *ngIf.</p>
+    <button (click)="toggleMessage()">Toggle Message</button>
+  
+    <!-- Structural Directive: *ngFor -->
+    <h2>Languages</h2>
+    <ul>
+      <li *ngFor="let lang of languages">{{ lang }}</li>
+    </ul>
+  
+    <!-- Attribute Directive: ngStyle -->
+    <p [ngStyle]="{ color: textColor }">
+      This text color is dynamically styled using ngStyle.
+    </p>
+    
+    <!-- Attribute Directive: ngClass -->
+    <p [ngClass]="{ highlight: isHighlighted }">
+      This text is highlighted based on a boolean variable using ngClass.
+    </p>
+    <button (click)="toggleHighlight()">Toggle Highlight</button>
+  </div>
+  

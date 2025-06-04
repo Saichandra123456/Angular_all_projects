@@ -1,0 +1,139 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+            <input class=" mm-global-search" type="text" placeholder="Search">
+
+            <mat-icon class="icons">search</mat-icon>
+            <span (click)="onSearchClick(searchText)">
+            </span>
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="franchisee">
+            <div class="franchisees">
+                <ul class="nav nav-pills mm-nav-pills mm-tabs-responsive" role="tablist">
+                    <li class="nav-item col-md-6 vl">
+                        <a href="#BusinessEntity" class="nav-link" [ngClass]="{'active' : path == 'New business'}"
+                            data-bs-toggle="tab">
+                            Business Entity</a>
+                    </li>
+                    <li class="nav-item col-md-6">
+                        <a href="Franchisee" class="nav-link" [ngClass]="{'active' : path == 'New franchisee'}"
+                            data-bs-toggle="tab">Franchisee</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div> -->
+
+        <div class="Sales">
+            <h5>Sales Channel </h5>
+            <button class="newButton" (click)="business()">
+                + New Business Name
+            </button>
+
+            <div class="search">
+                <div class="float-right">
+                    <div class="input-group ">
+                        <div class="form-outline">
+                            <input id="search-input" type="search" class="form-control" placeholder="Filter Stores" />
+                            <mat-icon class="Icons">search</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card  Business">
+            <table class="table">
+
+                <thead>
+                    <tr class="text-center">
+
+                        <th (click)="sort('id')">ID &nbsp;
+                            <mat-icon>
+                                arrow_upward</mat-icon>
+                        </th>
+                        <th (click)="sort('name')">Name &nbsp; <mat-icon>arrow_upward
+                            </mat-icon>
+                        </th>
+                        <th (click)="sort('status')">Status &nbsp; <mat-icon>arrow_upward</mat-icon>
+                        </th>
+                        <th (click)="sort('action')">Action &nbsp; <mat-icon>arrow_upward</mat-icon>
+                        </th>
+
+
+
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let row of franchisee |orderBy:key:reverse; let i=index" class="text-center">
+                        <td>{{row.id}}</td>
+                        <td>{{row.name}}</td>
+                        <!-- <td>{{row |json}}</td> -->
+
+
+
+                        <td
+                            [ngClass]="{'status-active': row.status == 'active', 'status-inactive': row.status == 'inactive'}">
+                            <i *ngIf="row.status == 'active'" class="material-icons circle ">check_circle</i>
+                            <i *ngIf=" row.status == 'inactive'" class="material-icons red">cancel</i>
+                            {{row.status}}
+                        </td>
+                        <td>
+                            <mat-icon class="action"> border_color</mat-icon>
+                            <!-- <mat-icon class="delete">delete</mat-icon> -->
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <div class="tab-content">
+    <div class="tab-pane fade show active" id="home">
+        <h4 class="mt-2">Home tab content</h4>
+        <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+    </div>
+    <div class="tab-pane fade" id="profile">
+        <h4 class="mt-2">Profile tab content</h4>
+        <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+    </div>
+    <div class="tab-pane fade" id="messages">
+        <h4 class="mt-2">Messages tab content</h4>
+        <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
+    </div>
+</div>
+</div>
+</body>
+</html> -->

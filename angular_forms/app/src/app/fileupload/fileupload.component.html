@@ -1,0 +1,17 @@
+<!-- file-upload.component.html -->
+<div style="margin-top: 96px; margin-left: 26px; color: #1A1A1A; font-family: Poppins, 'sans-serif';">
+  <div style="background-color: #FFFFFF; padding: 20px; border-radius: 8px; box-shadow: 3px 6px 12px 8px rgba(75, 68, 68, 0.75);">
+    <h4>Upload files</h4>
+    <form (ngSubmit)="uploadFiles()">
+      <div class="form-group">
+        <label><h6>Saviom File:</h6></label>
+        <input type="file" class="form-control" accept=".xlsx, .xls, .csv" [(ngModel)]="saviomFile" name="saviomFile" />
+      </div>
+      <div class="form-group">
+        <label><h6>Timesheets File:</h6></label>
+        <input type="file" class="form-control" accept=".xlsx, .xls, .csv" [(ngModel)]="timesheetsFile" name="timesheetsFile" />
+      </div>
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+  </div>
+</div>

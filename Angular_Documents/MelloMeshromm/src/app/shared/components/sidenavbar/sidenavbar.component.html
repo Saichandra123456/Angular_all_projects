@@ -1,0 +1,129 @@
+<section class="mm-asidebar">
+  <div id="wrapper">
+    <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened>
+        <div class="mm-DashLogo">
+          <a class="mm-logoArea">
+            <img src="../../assets/images/logo-Dash.png" class="img-fluid d-block" alt="mellow marshoom" />
+          </a>
+
+          <mat-list class="dashboard">
+
+            <mat-list-item routerLink="/dashboard" routerLinkActive="active"> <img
+                src="../../assets/images/dashboard.svg" class="Dashboard">
+              <a>
+                Dashboard</a>
+            </mat-list-item>
+            <p class="details">
+              <a data-bs-toggle="collapse" href="#multiCollapseExample" role="button" aria-expanded="false"
+                aria-controls="multiCollapseExample" class="store"><img src="../../assets/images/storedetails.svg"
+                  class="storedetails">Store Details <mat-icon>keyboard_arrow_down</mat-icon></a>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample">
+                  <!-- <div class="card card-body"> -->
+                  <!-- <mat-list-item> <a routerLink="/">Store Details</a></mat-list-item> -->
+                  <mat-list-item routerLink="storeinfo/" routerLinkActive="active">Store Info
+                  </mat-list-item>
+                  <mat-list-item routerLink="visit-communication-log" routerLinkActive="active">Visit & Communication
+                    Log
+                  </mat-list-item>
+                  <mat-list-item routerLink="/sales-chaneel" routerLinkActive="active">Sales Channel
+                  </mat-list-item>
+                  <mat-list-item routerLink="/marketprograms" routerLinkActive="active"> Marketing Program
+                  </mat-list-item>
+                  <mat-list-item routerLink="/building-details" routerLinkActive="active">Building Details>
+                  </mat-list-item>
+                  <mat-list-item routerLink="/technology" routerLinkActive="active"> Technology</mat-list-item>
+                  <mat-list-item routerLink="/guest-feedback" routerLinkActive="active">Guest Feedback
+                  </mat-list-item>
+                  <mat-list-item routerLink="/request-ticket" routerLinkActive="active">Request Tickets
+                  </mat-list-item>
+                  <mat-list-item routerLink="/image-gallery" routerLinkActive="active">Image Gallery
+                  </mat-list-item>
+
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+
+
+            <mat-list-item a routerLink="/franchisee" routerLinkActive="active"><img
+                src="../../assets/images/franchisee.svg" class="franchisee">
+              Franchisee
+            </mat-list-item>
+
+            <mat-list-item routerLink="business-coach" routerLinkActive="active"><img
+                src="../../assets/images/businesscoach.svg" class="business">Business
+              Coach</mat-list-item>
+
+            <mat-list-item routerLink="/marketingprogram" routerLinkActive="active"><img
+                src="../../assets/images/marketing program.svg" class="marketing">Marketing
+              Program</mat-list-item>
+
+            <mat-list-item a routerLink="/export" routerLinkActive="active"><img src="../../assets/images/export.svg"
+                class="export">Export
+            </mat-list-item>
+
+
+            <p>
+              <a data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false"
+                aria-controls="multiCollapseExample1" class="admin"><img src="../../assets/images/Admin.svg"
+                  class="Admin">Admin <mat-icon>keyboard_arrow_down</mat-icon> </a>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                  <mat-list-item a routerLink="/franchisee-business-entity" routerLinkActive="active"> Franchisees
+                    &Business Entities
+                  </mat-list-item>
+                  <mat-list-item routerLink="/createstores" routerLinkActive="active">
+                    Create Stores
+                  </mat-list-item>
+                  <mat-list-item routerLink="/Sales" routerLinkActive="active">Sales Channel
+                  </mat-list-item>
+                  <mat-list-item routerLink="/marketingprograms" routerLinkActive="active">Marketing Program
+                  </mat-list-item>
+                  <mat-list-item routerLink="/pci-compliance" routerLinkActive="active">PCI-Compliance
+                  </mat-list-item>
+                  <mat-list-item routerLink="/visit-communication-log" routerLinkActive="active"> visit
+                    &communication log
+                  </mat-list-item>
+                  <mat-list-item routerLink="/bulkedit" routerLinkActive="active">Bulk Edit</mat-list-item>
+                  <mat-list-item routerLink="/userpermission" routerLinkActive="active">User Permission
+                  </mat-list-item>
+                  <mat-list-item routerLink="/image-galleries" routerLinkActive="active">Image Gallery
+                  </mat-list-item>
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <mat-list-item a routerLink="/menu" routerLinkActive="active"><img src="../../assets/images/menu.svg"
+                class="menu">Menu
+            </mat-list-item>
+
+
+
+
+          </mat-list>
+        </div>
+
+
+
+      </mat-drawer>
+
+      <mat-drawer-content>
+        <router-outlet></router-outlet>
+        <!-- <app-dashboard></app-dashboard> -->
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+
+
+</section>

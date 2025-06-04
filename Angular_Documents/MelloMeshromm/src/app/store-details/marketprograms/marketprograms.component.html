@@ -1,0 +1,102 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+            <input class="form-control mm-global-search" type="text" placeholder="Search">
+
+            <mat-icon class="icons">search</mat-icon>
+            <span (click)="onSearchClick(searchText)">
+            </span>
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mm-store">
+            <h5 class="d-inline">Select a Store : </h5>
+            <div class="mm-Drop">
+                <input class="form-control Search" type="text" placeholder="Search">
+                <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="Drop btn">
+                    <mat-icon class="Arrowdown">keyboard_arrow_down</mat-icon>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+
+                    </ul>
+
+                </button>
+            </div>
+
+
+        </div>
+        <h5>marketing Programs</h5>
+
+        <div class="card">
+            <h5>Local Marketing Program</h5>
+
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th> Name</th>
+                        <th> Status </th>
+                        <th> Start Date </th>
+                        <th> End Date </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>Anil</td>
+                    <td class="Status"><i class="fa fa-check-circle-o mx-2"> </i>Active</td>
+                    <td>10-24-2018</td>
+                    <td>03-02-2023</td>
+
+
+                </tbody>
+                <thead>
+                    <h5>Global Marketing Program</h5>
+                    <tr>
+                        <th> Name</th>
+                        <th> Status </th>
+                        <th> Start Date </th>
+                        <th> End Date </th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of marketprograms;">
+                        <td>{{row.Name}}</td>
+                        <td class="Status"><i class="fa fa-check-circle-o mx-2"> </i>{{row.Status}}</td>
+                        <td>{{row.StartDate}}</td>
+                        <td>{{row.EndDate}}</td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</section>

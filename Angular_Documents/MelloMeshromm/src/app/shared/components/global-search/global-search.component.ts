@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-global-search',
+  templateUrl: './global-search.component.html',
+  styleUrls: ['./global-search.component.css']
+})
+export class GlobalSearchComponent implements OnInit {
+
+  search: any;
+  isSearch: any;
+  searchText: any;
+  onSearchClick: any;
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

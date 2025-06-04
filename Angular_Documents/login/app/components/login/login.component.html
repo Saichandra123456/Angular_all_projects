@@ -1,0 +1,91 @@
+<section class="login-form bg-primary">
+  <div class="container">
+    <div class="row mm-cards">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h3 class="text-center">Login Form</h3>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input
+                type="email"
+                placeholder="Enter A Email"
+                class="form-control"
+                formControlName="email"
+              />
+              <small
+                class="form-text text-danger"
+                *ngIf="
+                  loginForm.controls.email.touched &&
+                  loginForm.controls.email.errors?.required
+                "
+              >
+                <i>Please enter mail*</i>
+              </small>
+              <small
+                class="form-text text-danger"
+                *ngIf="
+                  loginForm.controls.email.touched &&
+                  loginForm.controls.email.errors?.email
+                "
+              >
+                <i>Email address not well formed.!</i>
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="loginForm.controls['email'].hasError('pattern')"
+                >Please enter mail as per pattern*</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <input
+                type="password"
+                placeholder="Enter A Password"
+                class="form-control"
+                formControlName="password"
+              />
+              <small
+                class="form-text text-danger"
+                *ngIf="
+                  loginForm.controls.password.touched &&
+                  loginForm.controls.password.errors?.required
+                "
+              >
+                <i>Please Enter password*</i>
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="loginForm.controls['password'].hasError('minlength')"
+              >
+                <i>your password is min length is 6 *</i>
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="loginForm.controls['password'].hasError('maxlength')"
+              >
+                <i>your password is min length is 12*.</i>
+              </small>
+            </div>
+            <div class="btns">
+              <button
+                type="button"
+                class="btn btn-primary mb-2 mt-4 float-right"
+                (click)="gets()"
+                [disabled]="!loginForm.valid"
+              >
+                Submit
+              </button>
+            </div>
+            <div class="register">
+              <span class="forgot"
+                ><a href="#">Forgot Password?</a
+                ><a class="sign" href="">Signup</a></span
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<!-- file-list.component.html -->
+<div style="margin-top: 96px; margin-left: 26px; color: #1A1A1A; font-family: Poppins, 'sans-serif';">
+  <div style="background-color: #FFFFFF; padding: 20px; border-radius: 8px; box-shadow: 3px 6px 12px 8px rgba(75, 68, 68, 0.75);">
+    <h1 style="text-indent: 35px;">Existing files</h1>
+    <div>
+      <input type="text" placeholder="Search files" [(ngModel)]="searchQuery" />
+      <button class="btn btn-primary btn-sm" (click)="searchFiles()">Search</button>
+    </div>
+    <ul>
+      <li *ngFor="let file of existingFiles">{{ file }}</li>
+    </ul>
+  </div>
+</div>

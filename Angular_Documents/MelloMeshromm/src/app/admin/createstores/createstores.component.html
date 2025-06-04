@@ -1,0 +1,279 @@
+<html>
+<div class="Heading">
+    <h3>Create New Store</h3>
+</div>
+    
+<div class="card">
+    <div class="franchisee">
+        <div class="  franchisees">
+            <ul class="nav nav-pills mm-nav-pills mm-tabs-responsive" role="tablist">
+                <!-- <ul class="nav nav-tabs" id="myTab"> -->
+                <li class="nav-item col-md-2 ">
+                    <a href="#storehome" class="nav-link" data-bs-toggle="tab">
+                        Store Home</a>
+                </li>
+                <li class="nav-item col-md-2">
+                    <a href="#imagegallery" class="nav-link" data-bs-toggle="tab">Image Gallery</a>
+                </li>
+
+                <li class="nav-item col-md-2">
+                    <a href="#saleschannel" class="nav-link" data-bs-toggle="tab">Sales Channel</a>
+                </li>
+                <li class="nav-item col-md-2">
+                    <a href="#buildingdetails" class="nav-link" data-bs-toggle="tab">Building Details</a>
+                </li>
+                <li class="nav-item col-md-2">
+                    <a href="#technology" class="nav-link" data-bs-toggle="tab">Technology</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="storehome">
+            <h6>Store Details</h6>
+            <div class="row">
+                <div class="col-4">
+                    <h5>Store ID <span class="star text-danger">*</span></h5>
+                    <input class="form-control Search" type="text">
+
+                    <h5>Store Open Date <span class="star text-danger open">*</span></h5>
+                    <input class="form-control Search" type="text" placeholder="-Select-">
+
+
+                    <h5>Warehouse <span class="star text-danger Open">*</span></h5>
+                    <input class="form-control Search" type="text" placeholder="-Select-">
+                    <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+
+
+                    <h5>Business Entity <span class="star text-danger Opens">*</span></h5>
+                    <input class="form-control Search" type="text" placeholder="-Select-">
+                    <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+
+
+
+
+                </div>
+                <div class="col-4">
+                    <h5> BusinessCoach Name <span class="star text-danger ">*</span></h5>
+                    <input class="form-control Search" type="text" placeholder="-Select-">
+                    <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+
+
+                    <h5>Comp Group Date <span class="star text-danger open">*</span></h5>
+                    <input class="form-control Search" type="text" placeholder="-Select-">
+
+                    <h5>Market Segment <span class="star text-danger Open">*</span></h5>
+                    <input class="form-control Search" type="text" placeholder="-Select-">
+                    <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+
+
+                    <h5>DMA <span class="star text-danger Opens">*</span></h5>
+                    <input class="form-control Search" type="text" placeholder="-Select-">
+                    <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+
+
+                </div>
+                <div class="col-4">
+                    <h5> Store Emails </h5>
+
+                    <div class=" card add">
+                        <input class="form-control Searching" type="text" placeholder="-Select-">
+                        <button class="btn btn-primary Add" type="button">Add</button>
+
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <h5> Signed FFA Date </h5>
+                    <input class="form-control Search" type="text" placeholder="-Select-">
+                </div>
+            </div>
+
+
+            <h4 class="Detailsss">Franchisee Details</h4>
+            <table class="table">
+
+                <thead>
+                    <tr class="text-center">
+                        <th (click)="sort('Name')">Name &nbsp; <mat-icon>arrow_upward
+                            </mat-icon>
+                        </th>
+                        <th (click)="sort('Email')">Email &nbsp; <mat-icon>arrow_upward
+                            </mat-icon>
+                        </th>
+                        <th (click)="sort('Status')">Status &nbsp; <mat-icon>arrow_upward
+                            </mat-icon>
+                        </th>
+                        <th (click)="sort('PhoneNumber')">Phone Number &nbsp; <mat-icon>arrow_upward
+                            </mat-icon>
+                        </th>
+                        <th (click)="sort('PhoneNumber')"> Primary Business Contact &nbsp; <mat-icon>arrow_upward
+                            </mat-icon>
+                        </th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of createstores |orderBy:key:reverse; let i=index" class=" text-center">
+                        <td>{{row.Name}}</td>
+                        <td>{{row.Email}}</td>
+                        <td
+                            [ngClass]="{'status-active': row.Status == 'Active', 'status-inactive': row.Status == 'InActive'}">
+                            <i class="material-icons circle ">check_circle</i>
+                            {{row.Status}}
+                        </td>
+                        <td>{{row.PhoneNumber}}</td>
+
+                        <td>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <a class="slider round"></a>
+                            </label>
+                        </td>
+
+                        <!-- <td class="Status"><i class="fa fa-check-circle-o mx-2"> </i>{{row.Status}}</td> -->
+                        <td>{{row.Sales}}</td>
+                        <!-- <td>{{row.Stores}}</td> -->
+
+                        <!-- <i class="fa fa-check" aria-hidden="true"></i> -->
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+
+            <h6>Store Contacts</h6>
+            <button class="btn buttonn" type="button">+Add</button>
+            <div class="card ">
+                <div class="row Contacts">
+                    <div class="col-4">
+                        <h5>Name</h5>
+                        <input class="form-control Search" type="text">
+
+                        <h5>Role</h5>
+                        <input class="form-control Search" type="text" placeholder="-Select-">
+                    </div>
+
+                    <div class="col-4">
+                        <h5>Phone Number</h5>
+                        <input class="form-control Search" type="text">
+
+                        <h5>Primary Operator</h5>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <a class="slider round"></a>
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <h5>Email</h5>
+                        <input class="form-control Search" type="text">
+                    </div>
+                    <div class="col-1">
+                        <mat-icon class="delete">delete</mat-icon>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="BTN">
+                <button class="btn Clear" type="button">Clear</button>
+
+                <button class="btn Save" type="button">Save</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="tab-pane fade" id="imagegallery">
+            <h4 class="mt-2">Profile tab content</h4>
+            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut,
+                mollis
+                a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis,
+                sed
+                molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc
+                facilisis
+                leo at faucibus adipiscing.</p>
+        </div>
+        <div class="tab-pane fade" id="saleschannel">
+            <h4 class="mt-2">Messages tab content</h4>
+            <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at
+                erat
+                magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris
+                et
+                ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet.
+                Cum
+                sociis natoque penatibus et magnis.</p>
+        </div>
+        <div class="tab-pane fade" id="buildingdetails">
+            <h4 class="mt-2">Messages tab content</h4>
+            <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at
+                erat
+                magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris
+                et
+                ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet.
+                Cum
+                sociis natoque penatibus et magnis.</p>
+        </div>
+        <div class="tab-pane fade" id="technology">
+            <h4 class="mt-2">Messages tab content</h4>
+            <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at
+                erat
+                magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris
+                et
+                ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet.
+                Cum
+                sociis natoque penatibus et magnis.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</html>

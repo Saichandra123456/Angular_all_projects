@@ -1,0 +1,88 @@
+-Navigation Bar
+<!-- <nav class="navbar navbar bg-primary">
+  <div class="container-fluid">
+    <div class="d-flex">
+      <button
+        class="btn btn-success"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        (click)="clickaddemployee()"
+      >
+        Add Employee
+      </button>
+    </div>
+  </div>
+</nav> -->
+
+
+<nav class="navbar navbar bg-secondary">
+  <div class="col-12">
+
+    <div class="justify-content-end float-left">
+      <button (click)="dashboard()" class="btn btn-info mr-2 float-left">Dashboard</button>
+
+      <button type="button" (click)="clickaddemployee()" class="btn btn-info mr-2" data-toggle="modal"
+        data-target="#exampleModal">
+        <i class="fas-fa-plus">Add NewJob </i>
+      </button>
+
+    </div>
+    <button (click)="logout()" class="btn btn-info mr-2 float-right">Logout</button>
+
+  </div>
+</nav>
+<h2 class="text-info float-left"> JOBLIST</h2>
+
+
+
+<!---Table--->
+<table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">JOB ID</th>
+      <th scope="col">JOB Name</th>
+      <th scope="col">JOB Description</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+
+  <tr *ngFor="let job of jobdata">
+    <td>{{ job.id }}</td>
+    <td>{{ job.name }}</td>
+    <td>{{ job.job }}</td>
+
+    <td>
+      <button class="btn btn-info" (click)="onEdit(job.id)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Edit
+      </button>
+      <button class="btn btn-danger mx-3" (click)="deleteEmployee(job.id)">
+        Delete
+      </button>
+    </td>
+  </tr>
+
+</table>
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-md-8 ">
+      <h1>asdfgh</h1>
+      <div class="row">
+        <div class="col-md-8 " style="background: blue; opacity:76%">
+          <img src="../../../assets/timesheet_validation_bg.png" alt="img-fluid">
+  
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-md-4">
+
+      <h1>Anil</h1>
+    </div>
+  </div>
+</div>

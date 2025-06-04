@@ -1,0 +1,110 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthServiceService } from 'src/app/auth-service.service';
+import { ApiService } from 'src/app/service/api.service';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  public loginForm!: FormGroup
+  constructor(private fromBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
+  ngOnInit(): void {
+    this.loginForm = this.fromBuilder.group({
+      email: [null, [Validators.required, Validators.email, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+      password: [null, [Validators.required, Validators.minLength(8)]],
+
+    })
+
+  }
+
+  // userName: any;
+  login() {
+    this.http.get<any>("http://localhost:3000/logindetails",)
+      .subscribe(res => {
+        const user = res.find((tera: any) => {
+
+          return tera.email === this.loginForm.value.email && tera.password === this.loginForm.value.password
+        });
+        if (user) {
+          alert("Login Success");
+          console.log(res)
+          this.loginForm.reset();
+          this.router.navigate(['employee-dashboard'])
+          // console.log(this.userName)
+        } else {
+          alert("user not found")
+
+        }
+      }, err => {
+        alert("Something Went Wrong")
+      })
+  }
+
+  logindetails() {
+
+    this.http.post<any>("http://localhost:3000/users", this.loginForm.value)
+      .subscribe(res => {
+        console.log(res)
+        this.loginForm.reset();
+
+      })
+  }
+
+  register() {
+    this.router.navigate(['signup'])
+  }
+}
+
+
+
+
+
+
+
+
+  //     const data = res.find((anil: any) => {
+  //       return anil.email == this.LoginForm.value.username && anil.password == this.LoginForm.value.password
+  //     })
+  //     if (data) {
+
+  //       alert("Login Success");
+  //       console.log(res)
+  //       this.LoginForm.reset();
+  //       this.router.navigate(['employee-dashboard'])
+  //     } else {
+  //       alert("user not found")
+
+  //     }
+  //   }, err => {
+  //     alert("Something Went Wrong")
+  //   })
+
+
+  // }
+
+
+
+
+  // register() {
+  //   this.router.navigate(['signup'])
+  // }
+
+
+// if(this.LoginForm.valid){
+//   this.authService.login(this.LoginForm.valid).subscribe(result=>{
+//     if(result.success){
+//     console.log(result);
+//     alert(result.message);
+//     }else
+//     {
+//       alert(result.message)
+//     }
+
+//   })
+// }

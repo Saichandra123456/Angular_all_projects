@@ -1,0 +1,17 @@
+
+.mm-cards{
+  justify-content: center;
+  transform: translateY(50%);
+}
+.btns{
+  transform: translate(40%);
+}
+.forgot{
+  float:right;
+  font-size: 13px;
+}
+.sign{
+  padding-left: 3px;
+  text-decoration: none;
+  color:#000;
+}

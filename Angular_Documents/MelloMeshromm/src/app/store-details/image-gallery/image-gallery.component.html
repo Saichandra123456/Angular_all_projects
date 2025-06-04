@@ -1,0 +1,144 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+            <input class="form-control mm-global-search" type="text" placeholder="Search">
+
+            <mat-icon class="icons">search</mat-icon>
+            <span (click)="onSearchClick(searchText)">
+            </span>
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="mm-store">
+            <h5 class="d-inline">Select a Store : </h5>
+            <div class="mm-Drop">
+                <input class="form-control Search" type="text" placeholder="Search">
+                <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="Drop btn">
+                    <mat-icon class="Arrowdown">keyboard_arrow_down</mat-icon>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+
+                    </ul>
+
+                </button>
+            </div>
+
+
+        </div>
+        <div class="mm-uploadImage">
+            <button class="mm-btnUpload" (click)="uploadImagesDialog()">
+                <img src="../../../assets/images/uploadsmall.png" alt="">
+
+                Upload Images</button>
+                <!-- <form>
+                    <input type="file" id="myFile" >
+                    
+                  </form> -->
+            <!-- <div class="centered">
+                <input type="file" name="file" id="file" #fileupload hidden (change)="onFileChange($event.target.files)" (click)="fileupload.value = null" multiple>
+            </div> -->
+        </div>
+
+    </div>
+</section>
+
+<div class="row">
+    <div class="col-md-8 ">
+        <div class="image" align="center">
+            <img src="../../../assets/images/gallery.png" class="image-fluid" width="480">
+        </div>
+    </div>
+    <div class="col-md-4 ">
+        <div class="image-info">
+            <table>
+                <tr>
+                    <td class="Images">Uploaded On : 12-03-2023</td>
+                </tr>
+                <tr>
+                    <td class="Images">Uploaded By : Anil</td>
+                </tr>
+                <tr>
+                    <td class="Images">Format : png</td>
+
+                </tr>
+                <tr>
+                    <td class="Images">Image Size: 200kb</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-12 mm-thumbnail-images">
+        <div class="float-left">
+            <h6>All Images</h6>
+        </div>
+        <button class="btn btnUpload float-right" (click)="downloadAllImages()">
+            <img src="../../../assets/images/download-all.png" > Download All
+        </button>
+    </div>
+
+    <div class="Images mb-3 d-flex">
+        <div class="p-3"><img src="../../../assets/images/gallery4.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery3.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery2.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery1.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery5.png"></div>
+
+        <div class="p-3"><img src="../../../assets/images/gallery4.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery3.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery2.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery1.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery5.png"></div>
+    </div>
+
+    <div class="Images mb-3 d-flex">
+        <div class="p-3"><img src="../../../assets/images/gallery4.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery3.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery2.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery1.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery5.png"></div>
+
+
+        <div class="p-3"><img src="../../../assets/images/gallery4.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery3.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery2.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery1.png"></div>
+        <div class="p-3"> <img src="../../../assets/images/gallery5.png"></div>
+    </div>
+<!-- 
+    <div class=" d-flex flex-wrap w-100">
+            <div class="mm-imgAlign position-relative">
+                <img class="mm-thumbnail">
+                <img src="../../../assets/images/crossIcon.png" class="mm-imagecancel"  alt="">
+            </div>
+    </div> -->
+
+</div>

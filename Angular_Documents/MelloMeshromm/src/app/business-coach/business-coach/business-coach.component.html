@@ -1,0 +1,55 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+            <input class="form-control mm-global-search" type="text" placeholder="Search">
+
+            < <mat-icon class="icons">search</mat-icon>
+                <span (click)="onSearchClick(searchText)">
+                </span>
+                <a class="active-notification">
+                    <span class="material-icons mm-notification"><img
+                            src="../../assets/images/notification.svg">notifications</span>
+                </a>
+                <div class="mm-dropdown notification">
+                    <div class="mm-heading d-flex justify-content-between">
+                        <h6>Anil</h6>
+                    </div>
+                    <img src="../../assets/images/profile.png" class="img-fluid">
+                    <div class="dropdown">
+                        <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                            <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">logOut</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+
+        <h5>Franchisee</h5>
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>Name</th>
+                    <th>Email </th>
+                    <th>Phone Number </th>
+                    <th>Business Entities</th>
+                    <th>Stores </th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of franchisee" class="text-center">
+                    <td>{{row.Name}}</td>
+                    <td>{{row.Email}}</td>
+                    <td>{{row.PhoneNumber}}</td>
+                    <td>{{row.BusinessEntities}}</td>
+                    <td>{{row.Stores}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+</section>

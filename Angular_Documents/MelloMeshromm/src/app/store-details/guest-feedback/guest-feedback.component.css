@@ -1,0 +1,73 @@
+.guestfeedback {
+    background: #EBF5F2;
+    border: 1px solid #008457;
+    border-radius: 6px;
+}
+
+.survey-name {
+    margin-top: -215px;
+}
+
+.checked {
+    color: green;
+}
+
+.reviews-list {
+    list-style: none;
+}
+
+.Ratings {
+    margin-top: 35px;
+}
+
+.reviewheading {
+    margin-top: 35px;
+    margin-bottom: -30px;
+}
+
+.left {
+    margin-left: 570px;
+
+}
+
+.LEFT {
+    margin-left: 570px;
+
+}
+
+/* .Anil {
+    margin-top: -35px;
+    margin-left: 60px;
+} */
+
+.media-body {
+    padding-left: 90px;
+    margin-top: -40px;
+}
+
+.mm-survey-name {
+    margin-top: -70px;
+}
+
+.mm-survey-names {
+    margin-top: -43px;
+}
+
+.days {
+    margin: 40px;
+}
+
+.Social {
+    padding: 35px;
+}
+
+.osat {
+
+    margin-left: 180px;
+    margin-top: 20px;
+
+}
+.Osat{
+    margin:-100px;
+    margin-left: 250px;
+}

@@ -1,0 +1,128 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+        <div class="mm-navbarCollapse">
+            <!-- <form [formGroup]="myform"> -->
+                <!-- <div class="mm-warp" style="position: relative;"> -->
+                <input #myInput  class="form-control mm-global-search" type="text"
+                    placeholder="Search">
+                <!-- [(ngModel)]="searchText" -->
+                <span (click)="onSearchClick(searchText)">
+                    <mat-icon matPrefix class="Search">search</mat-icon>
+
+                </span>
+
+            <!-- </form> -->
+
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+
+
+                <!-- <li class="nav-item dropdown"> -->
+                <!-- <a class="nav-link dropdown-toggle mm-navToggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                    </ul>
+                </div>
+                <!-- </a> -->
+                <!-- <a class="dropdown-item" (click)="logout()"><span
+                            class=" material-icons mm-icon ">logout</span>
+                        Logout
+                    </a>
+            </li> -->
+            </div>
+
+
+        </div>
+
+        <!-- <div class="search">
+     <mat-form-field> -->
+
+        <!-- <input matInput [(ngModel)]="search" class="searching" >
+        <div class="searchicon">
+        <mat-icon matPrefix>search</mat-icon>
+        </div> -->
+        <!-- </mat-form-field> -->
+        <!-- </div>  -->
+        <h1 class="mb-3">Overview</h1>
+        <div class="row m-auto no-gutters">
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card ">
+                    <div class="mm-media">
+                        <span class="material-icons purple">home</span>
+                        <div class="mm-mediaBody">
+                            <p>Total Stores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card">
+                    <div class="mm-media">
+                        <span class="material-icons pink">shopping_cart</span>
+                        <div class="mm-mediaBody">
+                            <p>Comp Stores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card ">
+                    <div class="mm-media">
+                        <span class="material-icons yellow">groups</span>
+                        <div class="mm-mediaBody">
+                            <p>Active Franchisee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card ">
+                    <div class="mm-media">
+                        <span class="material-icons green">star</span>
+                        <div class="mm-mediaBody">
+                            <p>Active States</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card ">
+                    <div class="mm-media">
+                        <span class="material-icons blue">shopping_bag</span>
+                        <div class="mm-mediaBody">
+                            <p>Active DMAs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card ">
+                    <div class="mm-media">
+                        <span class="material-icons orange">business</span>
+                        <div class="mm-mediaBody">
+                            <p>Active Business Entities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- table content -->
+<ng-container>
+    <app-storelist></app-storelist>
+    <!-- <app-global-search></app-global-search> -->
+    <app-global-search></app-global-search>
+
+</ng-container>

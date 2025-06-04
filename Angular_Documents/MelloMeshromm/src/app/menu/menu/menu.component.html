@@ -1,0 +1,151 @@
+<section class="container">
+
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+
+            <input class="form-control mm-global-search" type="text" placeholder="Search">
+
+            <mat-icon class="icons">search</mat-icon>
+            <span (click)="onSearchClick(searchText)">
+            </span>
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="mm-store">
+        <div class="d-block">
+            <h5>Menus</h5>
+            <h5>Select a Store : </h5>
+        </div>
+
+        <div class="mm-Drop">
+            <input class="form-control Search" type="text" placeholder="Search">
+            <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+                <!-- <mat-icon class="Arrow">keyboard_arrow_down</mat-icon> -->
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">logOut</a></li>
+                    <li><a class="dropdown-item" href="#">logOut</a></li>
+                    <li><a class="dropdown-item" href="#">logOut</a></li>
+                    <li><a class="dropdown-item" href="#">logOut</a></li>
+                    <li><a class="dropdown-item" href="#">logOut</a></li>
+                    <li><a class="dropdown-item" href="#">logOut</a></li>
+
+                </ul>
+            </button>
+        </div>
+        <div class="Fetch-menu ">
+            <div class="Menu">
+                <div class="menufetch">
+                    <input type="text" placeholder="Enter menu name" class="form-control">
+
+                </div>
+                <button class="btn btnButton" type="button" (click)="FetchMenu()">Fetch Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card ">
+        <div class="Bulk">
+            <div class="BulkEdit">
+                <ul class="nav nav-pills mm-nav-pills mm-tabs-responsive" role="tablist">
+                    <!-- <ul class="nav nav-tabs" id="myTab"> -->
+
+                    <!-- <ul class="nav nav-tabs" id="myTab"> -->
+                    <li class="nav-item col-md-4 ">
+                        <a href="#MainMenu" class="nav-link" data-bs-toggle="tab">
+                            Main Menu</a>
+                    </li>
+                    <li class="nav-item col-md-4">
+                        <a href="#BeverageMenu" class="nav-link" data-bs-toggle="tab">Beverage Menu</a>
+                    </li>
+
+                    <li class="nav-item col-md-4">
+                        <a href="#CateringMenu" class="nav-link" data-bs-toggle="tab">Catering Menu</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <h4>Showing results for “ Feb 2022 “menu</h4>
+    <div>
+        <input class="controlform" type="text" placeholder="Feb 2022 " />
+        <input class="controlForm" type="text" placeholder="Search " />
+        <mat-icon class="Icons">search</mat-icon>
+    </div>
+    <!-- <div class="card  Business"> -->
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="SalesChannel">
+                <table class="table">
+                    <thead>
+                        <tr class="text-center">
+                            <th (click)="sort('item')">Item &nbsp; <mat-icon>arrow_upward</mat-icon>
+                            </th>
+                            <th (click)="sort('category')">Category &nbsp; <mat-icon>arrow_upward</mat-icon>
+                            </th>
+                            <th (click)="sort('storepricing')">Store pricing &nbsp; <mat-icon>arrow_upward
+                                </mat-icon>
+                            </th>
+                            <th (click)="sort('lowestpricing')">Lowest Pricing &nbsp; <mat-icon>arrow_upward
+                                </mat-icon>
+                            </th>
+                            <th (click)="sort('averageprice')">Average Pricing &nbsp; <mat-icon>arrow_upward
+                                </mat-icon>
+                            </th>
+                            <th (click)="sort('highestprice')">Highest Pricing &nbsp; <mat-icon>arrow_upward
+                                </mat-icon>
+                            </th>
+                            <th (click)="sort('changefrompriormenu')">% Change From Prior Menu &nbsp; <mat-icon>
+                                    arrow_upward</mat-icon>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of menu |orderBy:key:reverse; let i=index" class="text-center">
+                            <td>{{row.item}}</td>
+                            <td>{{row.category}}</td>
+                            <td>{{row.storepricing}}</td>
+                            <td>{{row.lowestprice}}</td>
+                            <td>{{row.averageprice}}</td>
+                            <td>{{row.highestprice}}</td>
+                            <td>{{row.changefrompriormenu}}</td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    <!-- </div> -->
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+    <!-- </div> -->
+</section>

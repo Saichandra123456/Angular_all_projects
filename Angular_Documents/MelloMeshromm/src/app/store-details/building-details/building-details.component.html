@@ -1,0 +1,357 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+            <input class="form-control mm-global-search" type="text" placeholder="Search">
+
+            <mat-icon class="icons">search</mat-icon>
+            <span (click)="onSearchClick(searchText)">
+            </span>
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mm-store">
+            <h5 class="d-inline">Select a Store : </h5>
+            <div class="mm-Drop">
+                <input class="form-control Search" type="text" placeholder="Search">
+                <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="Drop btn">
+                    <mat-icon class="Arrowdown">keyboard_arrow_down</mat-icon>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+
+                    </ul>
+
+                </button>
+            </div>
+        </div>
+
+
+        <div class="mm-buildingDetails">
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="nav-item col-6 col-lg col-sm-6">
+                    <a href="#buildingdetails" class="nav-link active" data-bs-toggle="tab">Building Details</a>
+                </li>
+                <li class="nav-item col-6 col-lg col-sm-6">
+                    <a href="#designconstruction" class="nav-link" data-bs-toggle="tab">Design & Construction</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="buildingdetails">
+                <div class="card image-cards">
+                    <div class="mm-building row">
+                        <div class="col-md-4 mm-buldingImage card p-0">
+                            <div class="mm-imgGallery mm-imgGalleryNonResponsive">
+                                <img src="../../../assets/images/gallery.png" class="img-fluid">
+
+
+                            </div>
+                            <div class="d-flex">
+                                <img src="../../../assets/images/gallery.png" class="img-fluid img-bulding">
+                                <img src="../../../assets/images/gallery.png" class="img-fluid img-bulding">
+                                <img src="../../../assets/images/gallery.png" class="img-fluid img-bulding">
+                                <img src="../../../assets/images/gallery.png" class="img-fluid img-bulding">
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-8 mm-buildings">
+                            <div class="mm-building-heading clearfix">
+                                <label>Building Details</label>
+
+                            </div>
+                            <div class="mm-building-types">
+                                <div class="bar row">
+                                    <div class="col-6 col-md-4">
+                                        <h6>Building Type</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Total Sq Ft</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Bar Sq Ft</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Kitchen Sq Ft</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Dining Room Sq Ft</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Patio Sq Ft</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Total Seats</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Dining Seats</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Bar Dining Seats</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Bar Seats</h6>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6>Patio Seats</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Store Features -->
+                <div class="store-features">
+                    <div class="stores clearfix">
+                        <h4>Store Features</h4>
+
+                    </div>
+                    <div class="select-features card">
+                        <div class="row mm-cc">
+                            <div class="col-6 col-md-4">
+                                <div class="card mb-3">
+                                    <p>Number of Beer Taps</p>
+                                    <div class="d-flex align-items-center">
+                                        <h4>76</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card mb-3">
+                                    <div class="d-flex flex-column">
+                                        <p>Dedicated to go Area</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="material-icons green">check_circle</div>
+                                            <h4>Yes</h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card mb-3">
+                                    <div class="d-flex flex-column">
+                                        <p>Dedicated to go Door</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="material-icons green">check_circle</div>
+                                            <h4>Yes</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card mb-3">
+                                    <div class="d-flex flex-column">
+                                        <p>Conveyer Oven</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="material-icons red">cancel</div>
+                                            <h4>No</h4>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card mb-3">
+                                    <div class="d-flex flex-column">
+                                        <p>Patio</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="material-icons red">cancel</div>
+                                            <h4>No</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card mb-3">
+                                    <div class="d-flex flex-column">
+                                        <p>Merry Chefs</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="material-icons red">cancel</div>
+                                            <h4>No</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card mb-3">
+                                    <div class="d-flex flex-column">
+                                        <p>Dedicated Curbside Pickup</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="material-icons green">check_circle</div>
+                                            <h4>Yes</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <!-- <div class="card mm-privateroom-card"> -->
+                                <div class="card mb-3">
+                                    <div class="d-flex flex-column">
+                                        <p>Private Room </p>
+
+                                        <div class="d-flex align-items-center">
+                                            <div class="material-icons green">check_circle</div>
+                                            <h4>Yes</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--tabs design-construction starts-->
+
+            <div class="tab-pane fade" id="designconstruction">
+
+                <div id="designconstruction" class="tab-pane card">
+                    <div class="designs">
+                        <div class="original">
+                            <label>Original Build Details</label>
+
+                        </div>
+                        <div class="mm-original-build-details row">
+                            <div class="col-6 col-md-4">
+                                <h6>Design Style</h6>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <h6>Architect Name</h6>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <h6>Builder</h6>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <h6>Build Date</h6>
+                            </div>
+                        </div>
+                        <div class="renewal-details">
+                            <label>Renewal Details</label>
+                        </div>
+                        <div class="mm-original-build-details row">
+                            <div class="col-6 col-md-4">
+                                <h6>Design Style</h6>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <h6>Architect Name</h6>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <h6>Builder</h6>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <h6>Renewal Date</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="artist-details">
+                        <h3>Artist Details</h3>
+                        <table class="table">
+
+                            <thead>
+                                <tr>
+                                    <th>Artist Name</th>
+                                    <th> Phone Number </th>
+                                    <th> Email Id </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of artistdetails" class="text-center">
+                                    <td>{{row.artistname}}</td>
+                                    <td>{{row.phonenumber}}</td>
+                                    <td>{{row.emailid}}</td>
+                                </tr>
+                            </tbody> 
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <!-- </div> -->
+</section>
+
+<!-- 
+<html>
+<div class="m-4">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+            <a href="#home" class="nav-link active" data-bs-toggle="tab">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#profile" class="nav-link" data-bs-toggle="tab">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages" class="nav-link" data-bs-toggle="tab">Messages</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+            <h4 class="mt-2">Home tab content</h4>
+            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate
+                nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
+                aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+                Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+        </div>
+        <div class="tab-pane fade" id="profile">
+            <h4 class="mt-2">Profile tab content</h4>
+            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut,
+                mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum
+                turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis.
+                Nunc facilisis leo at faucibus adipiscing.</p>
+        </div>
+        <div class="tab-pane fade" id="messages">
+            <h4 class="mt-2">Messages tab content</h4>
+            <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at
+                erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet.
+                Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus
+                imperdiet. Cum sociis natoque penatibus et magnis.</p>
+        </div>
+    </div>
+</div>
+
+</html> -->

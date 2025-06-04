@@ -1,0 +1,253 @@
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 4px;
+
+    /* position: absolute; */
+    width: 448px;
+    height: 44px;
+    left: 262px;
+    top: 24px;
+
+    /* gray/100 */
+
+    background: #F3F4F6;
+    border-radius: 46px;
+}
+
+.searching {
+    padding-right: 231px;
+
+
+}
+
+.Search {
+    position: absolute;
+    right: -378px;
+    padding-top: 44px;
+    color: black;
+
+
+}
+
+.searchicon {
+    position: absolute;
+    top: 35px;
+    left: 406px;
+}
+
+.mm-cardWidget .h1 {
+    font-size: 20px;
+    line-height: 28px;
+    color: blue;
+    padding-bottom: 20px;
+}
+
+
+.mm-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgb(204 204 204 / 50%);
+    margin-right: 16px;
+}
+
+.mm-media {
+    position: relative;
+    padding: 28px 10px 38px 15px !important
+}
+
+
+
+span {
+    font-size: 18px;
+    line-height: 18px;
+    /* background-color: whitesmoke; */
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border: 1px solid white;
+    box-sizing: border-box;
+    padding: 11px 10px 11px 10.2px;
+    position: absolute;
+    top: -20px;
+    margin-right: 16px;
+}
+
+span.purple {
+    background-color: purple;
+}
+
+span.pink {
+    background-color: pink;
+}
+
+span.yellow {
+    background-color: yellow;
+}
+
+span.green {
+    background-color: green;
+}
+
+span.blue {
+    background-color: blue;
+}
+
+span.orange {
+    background-color: orange;
+}
+
+.mm-mediaBody .p {
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+    margin-bottom: 0;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h4 {
+    font-size: 32px;
+    line-height: 36px;
+    color: blue;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+
+
+.mm-media .mm-mediaBody p {
+    font-size: 14px;
+    line-height: 15px;
+
+}
+
+.mm-mediaBody {
+    text-align: center;
+
+}
+
+.mm-media .mm-mediaBody .h4 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+
+
+
+
+.col-sm-6 {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-bottom: 20px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.mm-media {
+    position: relative;
+    padding: 28px 21px 38px 15px;
+}
+
+.mm-global-search {
+    /* background-color: white-200; */
+    border-radius: 46px;
+    padding: 10px 16px;
+    width: 448px;
+    height: 44px;
+    border: none;
+    outline: none;
+    background-color: #F3F4F6
+}
+
+.dropdown {
+
+    position: relative;
+    top: -52px;
+    right: -90px;
+
+}
+
+
+.mm-searchIcon {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    top: 26px;
+    left: 400px;
+}
+
+
+
+.mb-3 {
+    position: initial;
+    margin-top: 27px;
+}
+
+
+
+.active-notification .mm-notification {
+    margin-top: -3px;
+    position: fixed;
+    right: 200px;
+    top: 15px;
+    z-index: 9999;
+    top: 33px;
+    right: 180px;
+}
+
+.img-fluid {
+    position: absolute;
+    right: -50px;
+    top: -4px;
+}
+
+.mm-icon {
+
+    color: blue-100;
+    font-size: 14px;
+    line-height: 16px;
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+
+}
+
+.notification {
+    position: absolute;
+    right: 139px;
+    /* top: -6px; */
+
+    position: absolute;
+    top: 45px;
+
+}
+
+.drop {
+    background: transparent;
+    border: none;
+}
+
+/* .mm-navbarCollapse {
+    position: fixed;
+} */

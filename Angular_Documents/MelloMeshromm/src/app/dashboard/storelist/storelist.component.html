@@ -1,0 +1,170 @@
+<!-- Store List -->
+<section class="mm-tableInformation">
+  <div class="mm-storelist">
+    <!-- <h2>All Stores</h2>
+        <div class="search">
+           
+            <input type="text" class="material-symbols-outlined"  [(ngModel)]="search">
+           
+     
+        </div>   -->
+    <div class="float-left">
+      <h2 class="ml-2">All Stores</h2>
+    </div>
+
+    <div class="search">
+      <div class="float-right">
+        <div class="input-group ">
+          <!-- <div class="form-outline"> -->
+          <input id="search-input" type="search" class="form-control" placeholder="Filter Stores" />
+          <span class="material-icons mm-icon mm-searchIcon">search </span>
+          <!-- </div> -->
+        </div>
+      </div>
+
+
+      <!-- <mat-form-field class="Search"> -->
+
+
+
+
+
+      <!-- <span class="mm-search float-right">
+                <input type="text" 
+                    placeholder="Filter stores" matInput [(ngModel)]="search" class="mm-controlForm " />
+                <span class="material-icons mm-icon mm-searchIcon">search </span>
+            </span> -->
+
+      <!-- <input placeholder="Filter Stores" matInput [(ngModel)]="search">
+            <div class="searchicon">
+            <mat-icon class="icon" matPrefix>search</mat-icon>
+            </div> 
+           </mat-form-field> -->
+    </div>
+
+    <table mat-table [dataSource]="dataSource" matSort class="table">
+
+
+      <thead>
+        <tr>
+          <th *ngFor="let x of stores | filter:search" class="STORE">
+
+            {{x.storename}}
+            {{x.state}}
+            {{x.date}}
+            {{x.businesscoach}}
+            {{x.status}}
+            {{x.operatinghours}}
+          </th>
+
+
+
+        </tr>
+      </thead>
+
+      <!-- ID  -->
+      <tbody>
+        <tr class="STORE">
+          <td class="mm-headerBody">
+
+            <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number" class="StoreId">
+            Store Id
+          </th>
+          <th mat-cell *matCellDef="let element"> {{element.id}} </th>
+
+          </ng-container>
+
+
+          <!-- Store Name  -->
+          <ng-container matColumnDef="storename">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by storename"
+              class="storename">
+              Store Name
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.storename}} </td>
+
+          </ng-container>
+
+
+          <!-- State -->
+          <ng-container matColumnDef="state">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by state" class="state">
+              State
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+          </ng-container>
+
+
+          <!-- lastcontacteddate -->
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by date"
+              ngClass="lastcontacteddate">
+              Last Contacted Date
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.date |date: 'dd/MM/yyyy'}} </td>
+          </ng-container>
+
+          <!-- Business Coach -->
+          <ng-container matColumnDef="businesscoach">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by businesscoach"
+              class="businesscoach">
+              Business Coach
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.businesscoach}} </td>
+          </ng-container>
+
+          <!-- Status -->
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by status" class="status">
+              Status
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+          </ng-container>
+
+          <!-- Operating Hours -->
+          <ng-container matColumnDef="operatinghours">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by operatinghours"
+              class="operatinghours">
+              Operating Hours
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.operatinghours}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="favourite">
+            <th mat-header-cell *matHeaderCellDef>
+
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <mat-icon class="favourite">favorite</mat-icon>
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="view">
+            <th mat-header-cell *matHeaderCellDef>
+
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <mat-icon class="view">remove_red_eye</mat-icon>
+            </td>
+          </ng-container>
+          </td>
+
+        </tr>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+
+      </tbody>
+    </table>
+
+  </div>
+  <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+  <!-- <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</section>

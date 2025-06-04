@@ -1,0 +1,328 @@
+.search input input-group form-outline {
+    position: absolute;
+    right: 0;
+    top: 270px;
+    float: right;
+    float: right;
+    position: absolute;
+    right: 17px;
+    /* top: 232px;
+    top: 233px; */
+    margin-top: 43px;
+    position: relative;
+    top: 50px;
+
+
+
+}
+
+.STORE {
+    border: 10px solid #f6f7f9;
+
+}
+
+.form-outline {
+    position: relative;
+    top: 50px;
+}
+
+
+.mat-form-field-wrapper {
+    padding-bottom: 2.34375em;
+    position: absolute;
+    /* right: -124px; */
+    left: 1039px;
+}
+
+.Search {
+    position: relative;
+    left: 1040px;
+    position: relative;
+    top: 53px;
+}
+
+.ml-2 {
+    margin-left: 20px;
+    margin-top: 2%;
+}
+
+
+.table {
+    width: 100%;
+}
+
+.searchicon {
+    float: right;
+    position: absolute;
+    /* top: 280px;
+    right: 20px; */
+    /* position: absolute;
+    top: -284px;
+    right: 0; */
+    position: absolute;
+    left: 180px;
+    top: 10px;
+
+
+
+}
+
+.mm-searchIcon {
+    position: absolute;
+    left: 180px;
+    top: 10px;
+}
+
+.float-right {
+    position: absolute;
+    right: 32px;
+    top: 272px;
+}
+
+.icon {
+    position: absolute;
+    top: -275px;
+    left: -10px;
+}
+
+td {
+    /* color: blue; */
+    /* font-size: 14px; */
+    line-height: 20px;
+    background: white;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    vertical-align: bottom;
+}
+
+.StoreId th {
+    position: absolute;
+    width: 54px;
+    height: 12px;
+    left: -305px;
+    top: -16px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 12px;
+    /* color: #202020; */
+}
+
+
+.mat-sort-header-content {
+    font-weight: 700 !important;
+}
+
+
+
+.storename th {
+    position: absolute;
+    width: 74px;
+    height: 12px;
+    left: 375px;
+    top: 404px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 12px;
+    /* identical to box height, or 86% */
+
+
+    color: #202020;
+
+}
+
+.state th {
+    position: absolute;
+    width: 33px;
+    height: 12px;
+    left: 549px;
+    top: 404px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 12px;
+    /* identical to box height, or 86% */
+
+
+    color: #202020;
+
+}
+
+.lastcontacteddate th {
+
+    position: absolute;
+    width: 128px;
+    height: 12px;
+    left: 722px;
+    top: 404px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 12px;
+    /* identical to box height, or 86% */
+
+
+    color: #202020;
+
+
+}
+
+.businesscoach th {
+    position: absolute;
+    width: 101px;
+    height: 12px;
+    left: 903px;
+    top: 404px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 12px;
+    /* identical to box height, or 86% */
+
+
+    color: #202020;
+
+}
+
+
+.status th {
+
+    position: absolute;
+    width: 41px;
+    height: 12px;
+    left: 1057px;
+    top: 404px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 12px;
+    /* identical to box height, or 86% */
+
+
+    color: #202020;
+
+
+
+}
+
+.operatinghours th {
+    position: absolute;
+    width: 103px;
+    height: 12px;
+    left: 1165px;
+    top: 404px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 12px;
+    /* identical to box height, or 86% */
+
+
+    color: #202020;
+
+
+}
+
+/* 
+.tabledata {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1150px;
+    height: 56px;
+    left: 262px;
+    top: 440px;
+
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+} */
+
+/* .table tr:hover {
+    background-color: antiquewhite;
+} */
+
+
+
+.mm-headerBody tr :hover {
+
+    background-color: aqua;
+}
+
+tbody,
+tr:hover {
+    cursor: pointer;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #f3f4f6;
+    box-shadow: 2px 2px 10px #cfd0d3;
+}
+
+
+
+
+tr.mm-headerBody th {
+    /* @include font-medium; */
+    font-size: 14px;
+    line-height: 12px;
+    color: black;
+    background-color: white-100;
+    border: none;
+    padding: 10px 12px;
+}
+
+.mm-sortIcon i.p-sortable-column-icon {
+    font-size: 10px !important;
+    line-height: 16px;
+    color: gray-100 !important;
+}
+
+
+
+/* .th.mat-header-cell:last-of-type,
+td.mat-cell:last-of-type,
+td.mat-footer-cell:last-of-type {
+    padding-right: 120px;
+} */
+
+.mat-sort-header {
+    font-weight: 700 !important;
+}
+
+.mat-header-cell {
+    color: black;
+}
+
+.favourite {
+    color: red;
+}
+
+.view {
+    color: #9CA3AF;
+    /* color: gainsboro; */
+
+}
+
+table tbody tr:hover {
+    cursor: pointer;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #f3f4f6;
+    box-shadow: 2px 2px 10px #cfd0d3;
+}

@@ -1,0 +1,268 @@
+span {
+    font-size: 18px;
+    line-height: 18px;
+    /* background-color: whitesmoke; */
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border: 1px solid white;
+    box-sizing: border-box;
+    padding: 11px 10px 11px 10.2px;
+    position: absolute;
+    top: -20px;
+    margin-right: 16px;
+}
+
+.mm-global-search {
+    /* background-color: white-200; */
+    border-radius: 46px;
+    padding: 10px 16px;
+    width: 448px;
+    height: 44px;
+    border: none;
+    outline: none;
+    background-color: #F3F4F6
+}
+
+
+.active-notification .mm-notification {
+    color: gray-200;
+    margin-top: -3px;
+    position: absolute;
+    right: 200px;
+    top: 15px;
+    z-index: 9999;
+    top: 34px;
+    right: 164px;
+
+
+
+}
+
+.img-fluid {
+    position: absolute;
+    right: -50px;
+    top: -4px;
+}
+
+.mm-icon {
+
+    font-size: 30px;
+    line-height: 16px;
+    position: relative;
+    top: -39px;
+    left: 390px;
+    margin-right: -77px;
+    color: #9CA3AF;
+}
+
+
+.notification {
+    position: absolute;
+    right: 139px;
+    /* top: -6px; */
+
+    position: absolute;
+    top: 45px;
+
+}
+
+table tbody tr:hover {
+    cursor: pointer;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #f3f4f6;
+    box-shadow: 2px 2px 10px #cfd0d3;
+}
+
+.icons {
+    position: relative;
+    right: -59px;
+    left: 410px;
+    top: -31px;
+}
+
+.arrowdown {
+    position: fixed;
+    left: 24p;
+    top: 45px;
+    /* left: 170px; */
+    right: 80px;
+}
+
+
+
+.drop {
+    background: transparent;
+    border: none;
+}
+
+
+
+.mm-store {
+    margin-bottom: 60px;
+}
+
+.mm-Drop input {
+    height: 40px;
+    top: 90px;
+}
+
+.Drop {
+    position: absolute;
+    left: 410px;
+    top: 92px;
+    background-color: transparent;
+}
+
+.Search {
+    position: absolute;
+    left: 12.31%;
+    width: 300px;
+    right: 64.57%;
+    top: 27.75%;
+    bottom: 58.35%;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.TicketSubject {
+    width: 307px;
+    text-align: left;
+}
+
+.Status {
+    /* background: rgba(0, 132, 87, 0.2);
+    border-radius: 12px; */
+    background: rgba(251, 146, 60, 0.2);
+    border-radius: 12px;
+}
+
+/* .mm-card{
+        
+        width: 203px;
+        height: 70px;
+        left: 279px;
+        top: 198px;
+        background: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        border-radius: 8px;
+}
+.mm-media{
+    background: #0891B2;
+border-radius: 4px;
+} */
+
+
+
+.mm-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgb(204 204 204 / 50%);
+    margin-right: 16px;
+}
+
+.mm-media {
+    position: relative;
+    padding: 28px 10px 38px 15px !important
+}
+
+
+
+span {
+    font-size: 18px;
+    line-height: 18px;
+    /* background-color: whitesmoke; */
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border: 1px solid white;
+    box-sizing: border-box;
+    padding: 11px 10px 11px 10.2px;
+    position: absolute;
+    top: -20px;
+    margin-right: 16px;
+}
+
+span.pink {
+    background: #0891B2;
+    border-radius: 4px;
+}
+
+span.pinks {
+    background: #059669;
+    border-radius: 4px;
+}
+
+span.green {
+    background: #DC2626;
+    border-radius: 4px;
+}
+
+span.greens {
+
+    background: #EA580C;
+    border-radius: 4px;
+}
+
+
+
+.mm-mediaBody .p {
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+    margin-bottom: 0;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h4 {
+    font-size: 32px;
+    line-height: 36px;
+    color: blue;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+
+
+.mm-media .mm-mediaBody p {
+    font-size: 14px;
+    line-height: 15px;
+
+}
+
+.mm-mediaBody {
+    text-align: center;
+
+}
+
+.mm-media .mm-mediaBody .h4 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+
+.mm-media {
+    position: relative;
+    padding: 28px 21px 38px 15px;
+}
+
+h5 {
+    padding: 30px;
+}
+
+.status-close {
+    background: rgba(0, 132, 87, 0.2);
+    border-radius: 12px;
+}
+
+.status-open {
+    background: rgba(251, 146, 60, 0.2);
+    border-radius: 12px;
+}

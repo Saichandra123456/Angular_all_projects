@@ -1,0 +1,146 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+            <input class="form-control mm-global-search" type="text" placeholder="Search">
+
+            <mat-icon class="icons">search</mat-icon>
+            <span (click)="onSearchClick(searchText)">
+            </span>
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mm-store">
+            <h5 class="d-inline">Select a Store : </h5>
+            <div class="mm-Drop">
+                <input class="form-control Search" type="text" placeholder="Search">
+                <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="Drop btn">
+                    <mat-icon class="Arrowdown">keyboard_arrow_down</mat-icon>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+
+                    </ul>
+
+                </button>
+            </div>
+
+
+        </div>
+
+        <div class="row m-auto no-gutters">
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card ">
+                    <div class="mm-media">
+                        <span class="material-icons pink">panorama_horizontal</span>
+                        <div class="mm-mediaBody">
+                            <p>Total Tickets</p>
+                            <p>150</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card">
+                    <div class="mm-media">
+                        <span class="material-icons pinks">panorama_horizontal</span>
+
+                        <div class="mm-mediaBody">
+                            <p>Open Tickets</p>
+                            <p>15</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card ">
+                    <div class="mm-media">
+                        <span class="material-icons green">warning_amber</span>
+                        <div class="mm-mediaBody">
+                            <p>Un Resolved</p>
+                            <p>5</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg col-sm-6">
+                <div class="mm-card ">
+                    <div class="mm-media">
+                        <span class="material-icons greens">loop</span>
+                        <div class="mm-mediaBody">
+                            <p>Resolved</p>
+                            <p>130</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <h5>Total Tickets</h5>
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th (click)="sort('ID')">ID &nbsp;<mat-icon>arrow_upward</mat-icon>
+                    </th>
+                    <th (click)="sort('TicketSubject')" class="TicketSubject">Ticket Subject &nbsp;<mat-icon>
+                            arrow_upward</mat-icon>
+                    </th>
+                    <th (click)="sort('SubmittedBy')">Submitted By &nbsp; <mat-icon>arrow_upward</mat-icon>
+                    </th>
+                    <th (click)="sort('TicketDate')">Ticket Date &nbsp; <mat-icon>arrow_upward</mat-icon>
+                    </th>
+                    <th>Status </th>
+
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of franchisee |orderBy:key:reverse; let i=index" class="text-center">
+                    <td>{{i+1}}</td>
+                    <td class="TicketSubject">{{row.TicketSubject}}</td>
+                    <td>{{row.SubmittedBy}}</td>
+                    <td>{{row.TicketDate}}</td>
+                    <td [ngClass]="{'status-close': row.Status == 'Closed', 'status-open': row.Status == 'Open'}">
+                        <input type="radio" name="Status">
+
+                        {{row.Status}}
+
+
+
+                    </td>
+
+
+                </tr>
+            </tbody>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+</section>

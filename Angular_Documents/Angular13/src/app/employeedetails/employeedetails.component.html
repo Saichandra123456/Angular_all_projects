@@ -1,0 +1,111 @@
+<section class="jobForm">
+  <div class="userLogin mt-5">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-4 mt-5">
+        <div class="card p-4">
+          <form [formGroup]="jobForm">
+            <!-- (ngSubmit)="login()" -->
+            <div class="heading-wrapper">
+              <h3 class="text-center">Job Detials</h3>
+            </div>
+            <div class="Name mb-4">
+              <label class="form-label">
+               Job Name<span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter  Name"
+                formControlName="name"
+              />
+              <div
+                *ngIf="
+                  jobForm.controls['name'].touched ||
+                  (jobForm.controls['name'].invalid &&
+                    jobForm.controls['name'].dirty)
+                "
+              >
+                <div
+                  *ngIf="jobForm.controls['name']?.errors?.['required']"
+                  class="text-danger"
+                >
+                  Name is required*
+                </div>
+                <div
+                  *ngIf="jobForm.controls['name']?.errors?.['pattern']"
+                  class="text-danger"
+                >
+                  Enter valid name*
+                </div>
+              </div>
+            </div>
+
+            <div class="Job mb-4">
+              <label class="form-label"
+                >Job Description<span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter JOB "
+                formControlName="job"
+              />
+              <div
+                *ngIf="
+                  jobForm.controls['job'].touched ||
+                  (jobForm.controls['job'].invalid &&
+                    jobForm.controls['job'].dirty)
+                "
+              >
+                <div
+                  *ngIf="jobForm.controls['job']?.errors?.['required']"
+                  class="text-danger"
+                >
+                  Job Name is required*
+                </div>
+                <div
+                  *ngIf="jobForm.controls['job']?.errors?.['pattern']"
+                  class="text-danger"
+                >
+                  Enter valid Jod Description*
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+              (click)="navigateToDashboard()"             >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                *ngIf="showAdd"
+                (click)="postdetails()"
+                [disabled]="!jobForm.valid"
+              >
+                create
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                *ngIf="showUpdate"
+                (click)="updatedetails()"
+                [disabled]="!jobForm.valid"
+              >
+                Update
+              </button>
+            </div>
+            <!-- <button type="button" (click)="create()" class="btn btn-primary">
+                create
+              </button> -->
+            <!-- *ngIf="showUpdate" -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

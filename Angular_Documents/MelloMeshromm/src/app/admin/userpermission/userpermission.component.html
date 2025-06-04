@@ -1,0 +1,112 @@
+<section class="container">
+    <div class="mm-cardWidget mt-4">
+
+        <div class="mm-navbarCollapse">
+            <input class=" mm-global-search" type="text" placeholder="Search">
+
+            <mat-icon class="icons">search</mat-icon>
+            <span (click)="onSearchClick(searchText)">
+            </span>
+            <a class="active-notification">
+                <span class="material-icons mm-notification"><img
+                        src="../../assets/images/notification.svg">notifications</span>
+            </a>
+            <div class="mm-dropdown notification">
+                <div class="mm-heading d-flex justify-content-between">
+                    <h6>Anil</h6>
+                </div>
+                <img src="../../assets/images/profile.png" class="img-fluid">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" class="drop">
+                        <mat-icon class="arrowdown">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">logOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="Entity">
+            <button class="newButton" (click)="business()">
+                + Create Nwe
+            </button>
+            <h5 class="user">User Permission </h5>
+            <div class="search">
+                <div class="float-right">
+                    <div class="input-group ">
+                        <div class="form-outline">
+                            <input id="search-input" type="search" class="form-control" placeholder="Filter Stores" />
+                            <mat-icon class="Icons">search</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card  Business">
+
+            <table class="table">
+
+                <thead>
+                    <tr class="text-center">
+
+                        <th (click)="sort('username')">User Name&nbsp;
+                            <mat-icon>
+                                arrow_upward</mat-icon>
+                        </th>
+                        <th (click)="sort('phonenumber')">Phone Number &nbsp; <mat-icon>arrow_upward
+                            </mat-icon>
+                        </th>
+                        <th (click)="sort('emailid')">Email Id &nbsp; <mat-icon>arrow_upward</mat-icon>
+                        </th>
+                        <th (click)="sort('role')">Role &nbsp; <mat-icon>arrow_upward</mat-icon>
+                        </th>
+
+                        <th></th>
+
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let row of userpermission |orderBy:key:reverse; let i=index" class="text-center">
+                        <td>{{row.username}}</td>
+                        <td>{{row.phonenumber}}</td>
+                        <td>{{row.emailid}}</td>
+                        <td>{{row.role}}</td>
+                        <td>
+                            <mat-icon class="action"> border_color</mat-icon>
+                            <!-- <mat-icon class="delete">delete</mat-icon> -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+    </div>
+</section>
+
+
+
+<!-- <div class="tab-content">
+    <div class="tab-pane fade show active" id="home">
+        <h4 class="mt-2">Home tab content</h4>
+        <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+    </div>
+    <div class="tab-pane fade" id="profile">
+        <h4 class="mt-2">Profile tab content</h4>
+        <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+    </div>
+    <div class="tab-pane fade" id="messages">
+        <h4 class="mt-2">Messages tab content</h4>
+        <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
+    </div>
+</div>
+</div>
+</body>
+</html> -->
